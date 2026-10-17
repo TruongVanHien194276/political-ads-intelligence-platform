@@ -1,0 +1,15 @@
+[
+  {
+    "advertisers_total": 22771,
+    "advertisers_26_weeks": 2601,
+    "advertisers_52_weeks": 1162,
+    "advertisers_long_history": 989,
+    "observed_weeks_quartiles": [
+      1,
+      3,
+      6,
+      12,
+      429
+    ]
+  }
+]

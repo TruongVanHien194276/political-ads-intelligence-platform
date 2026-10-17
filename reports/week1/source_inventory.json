@@ -1,0 +1,1228 @@
+{
+  "source_dataset": "bigquery-public-data.google_political_ads",
+  "location": "US",
+  "checked_at_utc": "2026-10-17T15:26:57.628515+00:00",
+  "tables": [
+    {
+      "name": "advertiser_declared_stats",
+      "table_type": "TABLE",
+      "estimated_rows": 526,
+      "size_bytes": 76409,
+      "last_modified_utc": "2026-10-17T15:15:08.615000+00:00",
+      "columns": [
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "ID of the advertiser who purchased the ad."
+        },
+        {
+          "name": "region",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Advertiser region."
+        },
+        {
+          "name": "advertiser_declared_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The advertiser's committee declared name."
+        },
+        {
+          "name": "advertiser_declared_regulatory_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Committee declared identification number."
+        },
+        {
+          "name": "advertiser_declared_scope",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Committee-provided information about the candidate and office or ballot proposition and jurisdiction to which the advertisement refers which is separate from our verification process."
+        },
+        {
+          "name": "advertiser_declared_promoter_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The New Zealand advertiser's declared Promoter Statement name."
+        },
+        {
+          "name": "advertiser_declared_promoter_address",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The New Zealand advertiser's declared Promoter Statement address."
+        }
+      ]
+    },
+    {
+      "name": "advertiser_geo_spend",
+      "table_type": "TABLE",
+      "estimated_rows": 687134,
+      "size_bytes": 150883875,
+      "last_modified_utc": "2026-10-17T15:15:13.231000+00:00",
+      "columns": [
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Unique ID for an advertiser verified to run election ads on Google Ads Services."
+        },
+        {
+          "name": "advertiser_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Name of the advertiser."
+        },
+        {
+          "name": "country",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The country where election ads were served specified in the ISO 3166-1 alpha-2 standard code. For example: \"US\" for United States."
+        },
+        {
+          "name": "country_subdivision_primary",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The primary subdivision of the country where election ads were served specified by the ISO 3166-2 standard code. For example: \"US-CA\" for California state in United States"
+        },
+        {
+          "name": "spend_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in USD spent on election ads in this region."
+        },
+        {
+          "name": "spend_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in EUR spent on election ads in this region."
+        },
+        {
+          "name": "spend_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in INR spent on election ads in this region."
+        },
+        {
+          "name": "spend_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BGN spent on election ads in this region."
+        },
+        {
+          "name": "spend_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CZK spent on election ads in this region."
+        },
+        {
+          "name": "spend_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in DKK spent on election ads in this region."
+        },
+        {
+          "name": "spend_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in HUF spent on election ads in this region."
+        },
+        {
+          "name": "spend_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in PLN spent on election ads in this region."
+        },
+        {
+          "name": "spend_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in RON spent on election ads in this region."
+        },
+        {
+          "name": "spend_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in SEK spent on election ads in this region."
+        },
+        {
+          "name": "spend_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in GBP spent on election ads in this region."
+        },
+        {
+          "name": "spend_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in NZD spent on election ads in this region."
+        },
+        {
+          "name": "spend_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ILS spent on election ads in this region."
+        },
+        {
+          "name": "spend_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in AUD spent on election ads in this region."
+        },
+        {
+          "name": "spend_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in TWD spent on election ads in this region."
+        },
+        {
+          "name": "spend_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BRL spent on election ads in this region."
+        },
+        {
+          "name": "spend_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ARS spent on election ads in this region."
+        },
+        {
+          "name": "spend_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ZAR spent on election ads in this region."
+        },
+        {
+          "name": "spend_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CLP spent on election ads in this region."
+        },
+        {
+          "name": "spend_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in MXN spent on election ads in this region."
+        }
+      ]
+    },
+    {
+      "name": "advertiser_stats",
+      "table_type": "TABLE",
+      "estimated_rows": 22771,
+      "size_bytes": 5479084,
+      "last_modified_utc": "2026-10-17T15:15:08.016000+00:00",
+      "columns": [
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Unique ID for an advertiser verified to run election ads on Google Ads Services."
+        },
+        {
+          "name": "advertiser_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Name of advertiser."
+        },
+        {
+          "name": "public_ids_list",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "List of public IDs used to identify the advertiser if available."
+        },
+        {
+          "name": "regions",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The list of regions where the ads of this advertiser were served"
+        },
+        {
+          "name": "elections",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The list of elections that this advertiser participated in based on the regions."
+        },
+        {
+          "name": "total_creatives",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total number of election ads the advertiser ran with at least one impression."
+        },
+        {
+          "name": "spend_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in USD spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in EUR spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in INR spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BGN spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CZK spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in DKK spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in HUF spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in PLN spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in RON spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in SEK spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in GBP spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in NZD spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ILS spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in AUD spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in TWD spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BRL spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ARS spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ZAR spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CLP spent on election ads by the advertiser."
+        },
+        {
+          "name": "spend_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in MXN spent on election ads by the advertiser."
+        }
+      ]
+    },
+    {
+      "name": "advertiser_weekly_spend",
+      "table_type": "TABLE",
+      "estimated_rows": 315944,
+      "size_bytes": 69409339,
+      "last_modified_utc": "2026-10-17T15:15:10.345000+00:00",
+      "columns": [
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Unique ID for an advertiser verified to run election ads on Google Ads Services."
+        },
+        {
+          "name": "advertiser_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Name of advertiser."
+        },
+        {
+          "name": "election_cycle",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] This field is deprecated in favor of the Elections column in advertiser_stats table. It will be deleted some time after July 2019."
+        },
+        {
+          "name": "week_start_date",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "The start date for the week where spending occurred."
+        },
+        {
+          "name": "spend_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in USD spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in EUR spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in INR spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in BGN spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in CZK spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in DKK spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in HUF spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in PLN spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in RON spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in SEK spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in GBP spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in NZD spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in ILS spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in AUD spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in TWD spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in BRL spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in ARS spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in ZAR spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in CLP spent on election ads during the given week by the advertiser."
+        },
+        {
+          "name": "spend_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "The amount in MXN spent on election ads during the given week by the advertiser."
+        }
+      ]
+    },
+    {
+      "name": "campaign_targeting",
+      "table_type": "TABLE",
+      "estimated_rows": 0,
+      "size_bytes": 0,
+      "last_modified_utc": "2026-10-17T15:15:07.651000+00:00",
+      "columns": [
+        {
+          "name": "campaign_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Unique ID for a political ad campaign."
+        },
+        {
+          "name": "age_targeting",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Age ranges included in the campaign's targeting."
+        },
+        {
+          "name": "gender_targeting",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Genders included in the campaign's targeting"
+        },
+        {
+          "name": "geo_targeting_included",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Geographic locations included in the campaign's targeting."
+        },
+        {
+          "name": "geo_targeting_excluded",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Geographic locations excluded from the campaign's targeting."
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Start date for the campaign."
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] End date for the campaign."
+        },
+        {
+          "name": "ads_list",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] List of Ad_IDs for the campaign."
+        },
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] ID of the advertiser who purchased the ad."
+        },
+        {
+          "name": "advertiser_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Name of advertiser."
+        }
+      ]
+    },
+    {
+      "name": "creative_stats",
+      "table_type": "TABLE",
+      "estimated_rows": 1604815,
+      "size_bytes": 3163746238,
+      "last_modified_utc": "2026-10-17T15:15:16.010000+00:00",
+      "columns": [
+        {
+          "name": "ad_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Unique id for a specific election ad."
+        },
+        {
+          "name": "ad_url",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "URL to view the election ad in the election Advertising on Google report."
+        },
+        {
+          "name": "ad_type",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The type of the ad. Can be TEXT VIDEO or IMAGE."
+        },
+        {
+          "name": "regions",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The regions that this ad is verified for or were served in."
+        },
+        {
+          "name": "advertiser_id",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "ID of the advertiser who purchased the ad."
+        },
+        {
+          "name": "advertiser_name",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Name of advertiser."
+        },
+        {
+          "name": "ad_campaigns_list",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "IDs of all election ad campaigns that included the ad."
+        },
+        {
+          "name": "date_range_start",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "First day a election ad ran and had an impression."
+        },
+        {
+          "name": "date_range_end",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "Most recent day a election ad ran and had an impression."
+        },
+        {
+          "name": "num_of_days",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total number of days a election ad ran and had an impression."
+        },
+        {
+          "name": "impressions",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Number of impressions for the election ad. Impressions are grouped into several buckets ≤ 10k 10k-100k 100k-1M 1M-10M > 10M."
+        },
+        {
+          "name": "spend_usd",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] This field is deprecated in favor of specifying the lower and higher spend bucket bounds in separate Spend_Range_Min and Spend_Range_Max columns."
+        },
+        {
+          "name": "first_served_timestamp",
+          "type": "TIMESTAMP",
+          "mode": "NULLABLE",
+          "description": "The timestamp of the earliest impression for this ad."
+        },
+        {
+          "name": "last_served_timestamp",
+          "type": "TIMESTAMP",
+          "mode": "NULLABLE",
+          "description": "The timestamp of the most recent impression for this ad."
+        },
+        {
+          "name": "age_targeting",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Age ranges included in the ad's targeting"
+        },
+        {
+          "name": "gender_targeting",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Genders included in the ad's targeting."
+        },
+        {
+          "name": "geo_targeting_included",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Geographic locations included in the ad's targeting."
+        },
+        {
+          "name": "geo_targeting_excluded",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "Geographic locations excluded in the ad's targeting."
+        },
+        {
+          "name": "is_funded_by_google_ad_grants",
+          "type": "BOOLEAN",
+          "mode": "NULLABLE",
+          "description": "Indicates whether the ad is funded by an in-kind donation through Google Ad Grants. Google ad Grants donates Search advertising to eligible organizations. Google does not endorse these ad."
+        },
+        {
+          "name": "spend_range_min_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in USD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in USD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in EUR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in EUR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in INR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in INR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in BGN spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in BGN spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in CZK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in CZK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in DKK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in DKK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in HUF spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in HUF spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in PLN spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in PLN spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in RON spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in RON spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in SEK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in SEK spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in GBP spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in GBP spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in NZD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in NZD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in ILS spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in ILS spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in AUD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in AUD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in TWD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in TWD spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in BRL spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in BRL spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in ARS spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in ARS spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in ZAR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in ZAR spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in CLP spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in CLP spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_min_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Lower bound of the amount in MXN spent by the advertiser on the election ad."
+        },
+        {
+          "name": "spend_range_max_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Upper bound of the amount in MXN spent by the advertiser on the election ad."
+        }
+      ]
+    },
+    {
+      "name": "geo_spend",
+      "table_type": "TABLE",
+      "estimated_rows": 1297,
+      "size_bytes": 255978,
+      "last_modified_utc": "2026-10-17T15:15:07.692000+00:00",
+      "columns": [
+        {
+          "name": "country",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The country where election ads were served specified in the ISO 3166-1 alpha-2 standard code. For example \"US\" for United States."
+        },
+        {
+          "name": "country_subdivision_primary",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The primary subdivision of the country where election ads were served specified by the ISO 3166-2 standard code. For example \"US-CA\" for California state in United States"
+        },
+        {
+          "name": "country_subdivision_secondary",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "The name of the secondary subdivision. For example The name of a US congressional district."
+        },
+        {
+          "name": "spend_usd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in USD spent on election ads in this region."
+        },
+        {
+          "name": "spend_eur",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in EUR spent on election ads in this region."
+        },
+        {
+          "name": "spend_inr",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in INR spent on election ads in this region."
+        },
+        {
+          "name": "spend_bgn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BGN spent on election ads in this region."
+        },
+        {
+          "name": "spend_czk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CZK spent on election ads in this region."
+        },
+        {
+          "name": "spend_dkk",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in DKK spent on election ads in this region."
+        },
+        {
+          "name": "spend_huf",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in HUF spent on election ads in this region."
+        },
+        {
+          "name": "spend_pln",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in PLN spent on election ads in this region."
+        },
+        {
+          "name": "spend_ron",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in RON spent on election ads in this region."
+        },
+        {
+          "name": "spend_sek",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in SEK spent on election ads in this region."
+        },
+        {
+          "name": "spend_gbp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in GBP spent on election ads in this region."
+        },
+        {
+          "name": "spend_nzd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in NZD spent on election ads in this region."
+        },
+        {
+          "name": "spend_ils",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ILS spent on election ads in this region."
+        },
+        {
+          "name": "spend_aud",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in AUD spent on election ads in this region."
+        },
+        {
+          "name": "spend_twd",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in TWD spent on election ads in this region."
+        },
+        {
+          "name": "spend_brl",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in BRL spent on election ads in this region."
+        },
+        {
+          "name": "spend_ars",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ARS spent on election ads in this region."
+        },
+        {
+          "name": "spend_zar",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in ZAR spent on election ads in this region."
+        },
+        {
+          "name": "spend_clp",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in CLP spent on election ads in this region."
+        },
+        {
+          "name": "spend_mxn",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "Total amount in MXN spent on election ads in this region."
+        }
+      ]
+    },
+    {
+      "name": "last_updated",
+      "table_type": "TABLE",
+      "estimated_rows": 1,
+      "size_bytes": 8,
+      "last_modified_utc": "2026-10-17T15:15:07.834000+00:00",
+      "columns": [
+        {
+          "name": "report_data_updated_time",
+          "type": "DATETIME",
+          "mode": "NULLABLE",
+          "description": "The time the report data was most recently updated"
+        }
+      ]
+    },
+    {
+      "name": "top_keywords_history",
+      "table_type": "TABLE",
+      "estimated_rows": 0,
+      "size_bytes": 0,
+      "last_modified_utc": "2026-10-17T15:15:08.743000+00:00",
+      "columns": [
+        {
+          "name": "election_cycle",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] This field is deprecated in favor of the Region and Elections field. It will be deleted some time after July 2019."
+        },
+        {
+          "name": "report_date",
+          "type": "DATE",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] The start date for the week where the spending was reported."
+        },
+        {
+          "name": "keyword_1",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": " [DEPRECATED] Keyword with the most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_1",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_1."
+        },
+        {
+          "name": "keyword_2",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Keyword with the next most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_2",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_2."
+        },
+        {
+          "name": "keyword_3",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Keyword with the next most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_3",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_3."
+        },
+        {
+          "name": "keyword_4",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Keyword with the next most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_4",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_4."
+        },
+        {
+          "name": "keyword_5",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Keyword with the next most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_5",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_5."
+        },
+        {
+          "name": "keyword_6",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Keyword with the next most spend by advertisers for political ads"
+        },
+        {
+          "name": "spend_usd_6",
+          "type": "INTEGER",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] Total spend in USD for Keyword_6."
+        },
+        {
+          "name": "region",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] The region where advertisers used these keywords."
+        },
+        {
+          "name": "elections",
+          "type": "STRING",
+          "mode": "NULLABLE",
+          "description": "[DEPRECATED] The elections during which these keywords were used."
+        }
+      ]
+    }
+  ]
+}

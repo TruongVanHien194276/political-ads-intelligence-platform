@@ -1,0 +1,12 @@
+[
+  {
+    "rows_total": 315944,
+    "rows_with_usd": 315944,
+    "rows_positive_usd": 255124,
+    "rows_positive_eur": 0,
+    "rows_positive_gbp": 3787,
+    "rows_positive_usd_and_eur": 0,
+    "null_election_cycle": 315944,
+    "election_cycles": 0
+  }
+]

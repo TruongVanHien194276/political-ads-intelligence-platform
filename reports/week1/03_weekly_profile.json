@@ -1,0 +1,13 @@
+[
+  {
+    "rows_total": 315944,
+    "advertisers": 22771,
+    "first_week": "2018-05-27",
+    "last_week": "2026-10-11",
+    "null_advertiser_id": 0,
+    "invalid_week": 0,
+    "invalid_spend": 0,
+    "negative_spend": 0,
+    "zero_spend": 60820
+  }
+]

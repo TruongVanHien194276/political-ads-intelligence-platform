@@ -1,0 +1,13 @@
+[
+  {
+    "creative_rows": 1604815,
+    "distinct_ad_ids": 1604815,
+    "null_ad_id": 0,
+    "null_advertiser_id": 0,
+    "first_start_date": "2018-05-31",
+    "last_end_date": "2026-10-17",
+    "null_spend_min": 0,
+    "null_spend_max": 0,
+    "reversed_spend_band": 13
+  }
+]

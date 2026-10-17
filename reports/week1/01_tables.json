@@ -1,0 +1,38 @@
+[
+  {
+    "table_name": "advertiser_declared_stats",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "advertiser_geo_spend",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "advertiser_stats",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "advertiser_weekly_spend",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "campaign_targeting",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "creative_stats",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "geo_spend",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "last_updated",
+    "table_type": "BASE TABLE"
+  },
+  {
+    "table_name": "top_keywords_history",
+    "table_type": "BASE TABLE"
+  }
+]

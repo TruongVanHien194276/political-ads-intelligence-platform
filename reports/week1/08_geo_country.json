@@ -1,0 +1,16 @@
+[
+  {
+    "country": "US",
+    "rows_total": 687133,
+    "advertisers": 17557,
+    "rows_positive_usd": 582474,
+    "spend_usd": 3041860100
+  },
+  {
+    "country": "GB",
+    "rows_total": 1,
+    "advertisers": 1,
+    "rows_positive_usd": 0,
+    "spend_usd": 0
+  }
+]
