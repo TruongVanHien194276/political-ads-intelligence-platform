@@ -16,3 +16,13 @@
 - Kiểm tra backfill không tải thêm dữ liệu: `political-ads-raw --backfill-start 2026-09-20 --backfill-end 2026-10-11`; cùng phiên bản nguồn sẽ trả `SKIPPED`, nguồn đổi sẽ trả `DRY_RUN` cho phiên bản mới
 - Publish một snapshot: `political-ads-publish-local --source-run data/raw/source=google_political_ads/table=advertiser_weekly_spend/week_start=2026-10-04/run_id=f6c333bcf330ef62`
 - Dữ liệu raw và lake local được `.gitignore` để không đưa lên Git; GCS chưa được upload và `terraform apply` chưa chạy vì project không bật billing
+
+## Tuần 4 — Bronze và Silver
+
+- Dùng Python 3.13 riêng cho dbt-duckdb trong `data/tmp/week4/venv`; Python 3.14 của Tuần 1–3 không đổi
+- Cài môi trường: `python3.13 -m venv data/tmp/week4/venv` rồi `data/tmp/week4/venv/bin/python -m pip install 'duckdb==1.5.6' 'dbt-core>=1.11,<1.12' 'dbt-duckdb==1.11.0'`
+- Sau khi cài môi trường, chạy `make week4` từ project root để lần lượt load Bronze, dbt build và MERGE Silver current
+- DuckDB local có Bronze append-only, dbt staging/valid/quarantine, Silver history là lịch sử snapshot, Silver current dùng `MERGE` theo advertiser-tuần; replay không nhân đôi key
+- Đối soát trên bốn snapshot hiện tại: raw 9.699 = valid 9.699 + quarantine 0; history 9.699; current 9.699; duplicate current key 0
+- BigQuery Sandbox chỉ có bảng demo `political_ads_bronze_demo.raw_f6c333bcf330ef62` với 2.629 dòng, không chạy `MERGE` trên BigQuery Sandbox; script demo từ chối project đã bật billing
+- Kiểm tra offline bằng `make check`; test có replay, sửa/xóa nguồn, checksum và quality gate

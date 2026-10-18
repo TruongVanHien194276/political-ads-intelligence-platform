@@ -15,6 +15,7 @@ dependencies = [
 [project.optional-dependencies]
 cloud = ["google-cloud-storage>=3.14,<4"]
 dev = [
+  "duckdb==1.5.6",
   "pytest>=9,<10",
   "ruff>=0.14,<1",
 ]

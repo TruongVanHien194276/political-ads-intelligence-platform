@@ -8,6 +8,7 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .dbt/
+.user.yml
 target/
 logs/
 data/raw/

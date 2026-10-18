@@ -1,4 +1,4 @@
-.PHONY: check fmt test
+.PHONY: check fmt test week4
 
 check:
 	python -m ruff check .
@@ -11,3 +11,8 @@ fmt:
 
 test:
 	python -m pytest -q
+
+week4:
+	data/tmp/week4/venv/bin/python scripts/week4_load.py
+	WEEK4_DB_PATH="$(CURDIR)/data/tmp/week4/warehouse.duckdb" data/tmp/week4/venv/bin/dbt build --project-dir transform --profiles-dir transform
+	data/tmp/week4/venv/bin/python scripts/week4_promote.py

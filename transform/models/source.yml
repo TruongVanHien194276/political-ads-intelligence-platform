@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: weekly_raw
+
+models:
+  - name: stg_weekly
+    columns:
+      - name: bronze_row_key
+        data_tests:
+          - unique
+          - not_null

@@ -94,9 +94,9 @@ GitHub Actions chạy test, Terraform quản lý tài nguyên cloud
 ### Tuần 4 — Bronze và Silver
 
 - Input: raw Parquet và manifest
-- Công nghệ: BigQuery load job, SQL `MERGE`, dbt staging
+- Công nghệ: BigQuery Sandbox load job demo, DuckDB SQL `MERGE`, dbt-duckdb staging; BigQuery Sandbox không hỗ trợ DML
 - Việc làm: Bronze append-only, Silver ép kiểu, chuẩn hóa ngày và currency, tách bản lỗi, xử lý source sửa lại
-- Output: Bronze, Silver current/history, quarantine và query đối soát
+- Output: Bronze, Silver current/history, quarantine và query đối soát trong DuckDB local; một bảng Bronze demo trong BigQuery Sandbox
 - Xong khi: `raw = valid + quarantine` theo quy tắc đã ghi, replay không tạo duplicate current key
 
 ### Tuần 5 — Warehouse và dbt Gold

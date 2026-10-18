@@ -1,0 +1,10 @@
+political_ads_week4:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('WEEK4_DB_PATH') }}"
+      schema: main
+      threads: 2
+      settings:
+        memory_limit: "1GB"

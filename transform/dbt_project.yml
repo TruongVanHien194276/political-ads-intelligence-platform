@@ -1,0 +1,12 @@
+name: political_ads_week4
+version: "1.0"
+config-version: 2
+
+profile: political_ads_week4
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  political_ads_week4:
+    +materialized: view
