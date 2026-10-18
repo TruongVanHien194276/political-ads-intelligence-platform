@@ -27,9 +27,7 @@ def main() -> None:
 
     # Khi không export GCP_PROJECT_ID, BigQuery dùng project mặc định từ ADC
     client = bigquery.Client(project=os.getenv("GCP_PROJECT_ID") or None)
-    dataset = client.get_dataset(
-        "bigquery-public-data.google_political_ads"
-    )
+    dataset = client.get_dataset("bigquery-public-data.google_political_ads")
     location = dataset.location
     max_bytes = args.max_mib * 1024 * 1024
 

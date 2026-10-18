@@ -1,0 +1,14 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+COPY pyproject.toml ./
+COPY src ./src
+
+RUN python -m pip install --no-cache-dir -e ".[dev]"
+
+COPY scripts ./scripts
+COPY tests ./tests
+COPY sql ./sql
+
+CMD ["python", "-m", "pytest", "-q"]

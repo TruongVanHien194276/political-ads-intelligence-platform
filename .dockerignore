@@ -1,0 +1,13 @@
+.git
+.venv
+*.egg-info
+.env
+.env.*
+data
+reports
+__pycache__
+.pytest_cache
+.ruff_cache
+.terraform
+*.tfstate
+*.tfplan

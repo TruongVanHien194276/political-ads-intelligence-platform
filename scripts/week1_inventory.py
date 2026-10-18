@@ -5,7 +5,6 @@ from pathlib import Path
 
 from google.cloud import bigquery
 
-
 SOURCE_DATASET = "bigquery-public-data.google_political_ads"
 OUTPUT_PATH = Path("reports/week1/source_inventory.json")
 

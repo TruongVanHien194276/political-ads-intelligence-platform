@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 .venv/
+*.egg-info/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
@@ -19,3 +20,9 @@ models/checkpoints/
 *.joblib
 *.db
 .DS_Store
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example

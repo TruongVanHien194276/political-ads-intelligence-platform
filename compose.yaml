@@ -1,0 +1,15 @@
+services:
+  dev:
+    profiles: ["dev"]
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+    volumes:
+      - .:/app
+    mem_limit: 2g
+    cpus: 2
+    command:
+      - sh
+      - -c
+      - python -m ruff check . && python -m ruff format --check . && python -m pytest -q

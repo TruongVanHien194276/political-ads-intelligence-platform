@@ -10,4 +10,6 @@
 - Môi trường local: Python 3.14.4 trong `.venv`, BigQuery client và ADC đã đọc được metadata nguồn
 - [Roadmap 16 tuần với công việc và output từng tuần](ROADMAP.md)
 - [Tuần 1: source inventory, profiling và quyết định ML](reports/week1/WEEK1.md) đã hoàn thành
-- Pipeline và platform các tuần tiếp theo chưa được xây
+- Tuần 2 đã có package Python, CLI dry-run có cost limit, mock tests, Docker, CI và Terraform plan
+- Kiểm tra offline bằng `python -m pip install -e ".[dev]"` rồi `make check`
+- Chưa chạy `terraform apply`; ingestion raw lake và các phần sau thuộc Tuần 3 trở đi
