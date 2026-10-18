@@ -9,9 +9,11 @@ description = "Political ads data engineering portfolio project"
 requires-python = ">=3.14,<3.15"
 dependencies = [
   "google-cloud-bigquery==3.46.2",
+  "pyarrow==26.0.0",
 ]
 
 [project.optional-dependencies]
+cloud = ["google-cloud-storage>=3.14,<4"]
 dev = [
   "pytest>=9,<10",
   "ruff>=0.14,<1",
@@ -19,6 +21,8 @@ dev = [
 
 [project.scripts]
 political-ads = "political_ads.cli:main"
+political-ads-raw = "political_ads.raw_cli:main"
+political-ads-publish-local = "political_ads.local_publish:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

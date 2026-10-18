@@ -12,4 +12,7 @@
 - [Tuần 1: source inventory, profiling và quyết định ML](reports/week1/WEEK1.md) đã hoàn thành
 - Tuần 2 đã có package Python, CLI dry-run có cost limit, mock tests, Docker, CI và Terraform plan
 - Kiểm tra offline bằng `python -m pip install -e ".[dev]"` rồi `make check`
-- Chưa chạy `terraform apply`; ingestion raw lake và các phần sau thuộc Tuần 3 trở đi
+- Tuần 3 đã có bốn snapshot tuần 2026-09-20 đến 2026-10-11 trong `data/raw/`, đã đối soát và publish sang `data/tmp/raw-lake/` (9.699 dòng tổng cộng)
+- Kiểm tra backfill không tải thêm dữ liệu: `political-ads-raw --backfill-start 2026-09-20 --backfill-end 2026-10-11`; cùng phiên bản nguồn sẽ trả `SKIPPED`, nguồn đổi sẽ trả `DRY_RUN` cho phiên bản mới
+- Publish một snapshot: `political-ads-publish-local --source-run data/raw/source=google_political_ads/table=advertiser_weekly_spend/week_start=2026-10-04/run_id=f6c333bcf330ef62`
+- Dữ liệu raw và lake local được `.gitignore` để không đưa lên Git; GCS chưa được upload và `terraform apply` chưa chạy vì project không bật billing

@@ -86,9 +86,9 @@ GitHub Actions chạy test, Terraform quản lý tài nguyên cloud
 ### Tuần 3 — Ingestion và raw lake
 
 - Input: query nguồn đã chốt
-- Công nghệ: Python BigQuery client, GCS, Parquet, PyArrow
+- Công nghệ: Python BigQuery client, Parquet, PyArrow; GCS là tùy chọn khi bật billing
 - Việc làm: lấy một cửa sổ lịch sử giới hạn, tạo raw partition và manifest chứa run ID, query hash, row count, checksum
-- Output: extractor CLI hỗ trợ ngày chạy và backfill, raw snapshot trên GCS
+- Output: extractor CLI hỗ trợ ngày chạy và backfill, raw snapshot + manifest trên lake local; có thể publish lên GCS sau khi chủ động bật billing
 - Xong khi: chạy lại cùng kỳ không ghi đè âm thầm hoặc nhân đôi dữ liệu
 
 ### Tuần 4 — Bronze và Silver
