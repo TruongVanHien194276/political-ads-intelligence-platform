@@ -5,9 +5,15 @@
 .env.*
 data
 reports
+tests
+infra
+transform/target
+*.parquet
+*.duckdb
 __pycache__
 .pytest_cache
 .ruff_cache
 .terraform
 *.tfstate
 *.tfplan
+build

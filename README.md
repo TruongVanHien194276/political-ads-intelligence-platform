@@ -44,3 +44,10 @@
 
 - DAG `political_ads_weekly` điều phối 5 bước trên raw snapshot local, giới hạn một task cùng lúc
 - Cách khởi động, backfill, retry, replay và xử lý sự cố: [runbook Tuần 7](reports/week7/WEEK7.md)
+
+## Tuần 8 — Batch cloud (đã chuẩn bị offline)
+
+- Có CLI riêng cho Cloud Run Jobs, image, Terraform cho IAM/Jobs/Workflows/Scheduler và SQL publish Bronze → Silver → Gold
+- `make check`, `terraform validate` và image smoke test chạy offline; chưa deploy vì project không bật billing theo lựa chọn của chủ project
+- Lịch Terraform mặc định `paused = true`, runtime mặc định tắt; chưa có cloud run IDs hoặc bằng chứng chạy nguồn đến Gold không cần Mac
+- Sơ đồ triển khai, IAM, chi phí, runbook và tiêu chí nghiệm thu cloud: [Tuần 8](reports/week8/WEEK8.md)

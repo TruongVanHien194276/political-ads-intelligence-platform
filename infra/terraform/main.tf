@@ -36,6 +36,39 @@ resource "google_bigquery_dataset" "bronze" {
   }
 }
 
+resource "google_bigquery_dataset" "silver" {
+  dataset_id                 = "political_ads_silver"
+  location                   = "US"
+  delete_contents_on_destroy = false
+
+  labels = {
+    project = "political_ads"
+    layer   = "silver"
+  }
+}
+
+resource "google_bigquery_dataset" "gold" {
+  dataset_id                 = "political_ads_gold"
+  location                   = "US"
+  delete_contents_on_destroy = false
+
+  labels = {
+    project = "political_ads"
+    layer   = "gold"
+  }
+}
+
+resource "google_bigquery_dataset" "ops" {
+  dataset_id                 = "political_ads_ops"
+  location                   = "US"
+  delete_contents_on_destroy = false
+
+  labels = {
+    project = "political_ads"
+    layer   = "ops"
+  }
+}
+
 resource "google_storage_bucket" "raw" {
   count = var.enable_gcs ? 1 : 0
 

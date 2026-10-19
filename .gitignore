@@ -22,6 +22,7 @@ models/checkpoints/
 *.db
 .DS_Store
 .terraform/
+build/
 *.tfstate
 *.tfstate.*
 *.tfplan

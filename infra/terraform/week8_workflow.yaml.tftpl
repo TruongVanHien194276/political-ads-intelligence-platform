@@ -1,0 +1,48 @@
+main:
+  params: [input]
+  steps:
+    - chooseWeek:
+        assign:
+          - weekStart: $${default(map.get(input, "week_start"), "")}
+    - logStart:
+        call: sys.log
+        args:
+          text: $${"ads-weekly started week_start=" + weekStart}
+          severity: INFO
+    - extract:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: projects/${project_id}/locations/${region}/jobs/ads-extract
+          connector_params:
+            timeout: 2100
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: WEEK_START
+                      value: $${weekStart}
+        result: extractResult
+    - publish:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: projects/${project_id}/locations/${region}/jobs/ads-publish
+          connector_params:
+            timeout: 2100
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: WEEK_START
+                      value: $${weekStart}
+        result: publishResult
+    - logSuccess:
+        call: sys.log
+        args:
+          text: $${"ads-weekly published week_start=" + weekStart}
+          severity: INFO
+    - done:
+        return:
+          status: PASS
+          requested_week_start: $${weekStart}
+          extract_operation: $${extractResult.name}
+          publish_operation: $${publishResult.name}

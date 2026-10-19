@@ -24,9 +24,13 @@ dev = [
 political-ads = "political_ads.cli:main"
 political-ads-raw = "political_ads.raw_cli:main"
 political-ads-publish-local = "political_ads.local_publish:main"
+political-ads-cloud = "political_ads.cloud_batch:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+political_ads = ["sql/cloud/*.sql"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
