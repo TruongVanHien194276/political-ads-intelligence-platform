@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: dim_advertiser
+    description: "Một dòng mỗi advertiser; tên mới nhất quan sát được"
+    columns:
+      - name: advertiser_id
+        data_tests: [unique, not_null]
+
+  - name: dim_week
+    description: "Một dòng mỗi tuần nguồn, tuần bắt đầu vào Chủ nhật"
+    columns:
+      - name: week_start_date
+        data_tests: [unique, not_null]
+
+  - name: fct_advertiser_weekly_spend
+    description: "Grain advertiser_id + week_start_date, chỉ chứa USD"
+    columns:
+      - name: advertiser_week_key
+        data_tests: [unique, not_null]
+      - name: advertiser_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_advertiser')
+                field: advertiser_id
+      - name: week_start_date
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_week')
+                field: week_start_date
+      - name: amount_usd
+        description: "Chi tiêu USD công bố trong tuần, không phải conversion hoặc revenue"
+        data_tests: [not_null]
+      - name: currency_code
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['USD']
+
+  - name: mart_spend_trend_weekly
+    description: "Một dòng mỗi tuần; KPI trend tính từ fact USD"
+    columns:
+      - name: week_start_date
+        data_tests: [unique, not_null]
+      - name: total_spend_usd
+        description: "SUM(amount_usd), grain tuần, đơn vị USD"
+      - name: advertiser_count
+        description: "Số advertiser có dòng spend trong tuần"
+      - name: wow_change_pct
+        description: "Phần trăm thay đổi so với tuần liền trước; NULL nếu không đủ điều kiện"
+
+  - name: mart_advertiser_summary
+    description: "Một dòng mỗi advertiser trong phạm vi tuần đã tải"
+    columns:
+      - name: advertiser_id
+        data_tests: [unique, not_null]
+      - name: total_spend_usd
+        description: "SUM(amount_usd) qua các tuần quan sát, đơn vị USD"
+      - name: weeks_observed
+        description: "Số tuần có dòng dữ liệu, không phải toàn bộ tuần trong lịch"
+
+  - name: mart_bi_weekly
+    columns:
+      - name: week_start_date
+        data_tests: [unique, not_null]
+
+  - name: mart_api_advertiser
+    columns:
+      - name: advertiser_id
+        data_tests: [unique, not_null]
+
+  - name: mart_targeting_coverage
+    description: "Trạng thái nguồn targeting, không chứa KPI targeting"
+    columns:
+      - name: required_source
+        data_tests: [unique, not_null]

@@ -26,3 +26,10 @@
 - Đối soát trên bốn snapshot hiện tại: raw 9.699 = valid 9.699 + quarantine 0; history 9.699; current 9.699; duplicate current key 0
 - BigQuery Sandbox chỉ có bảng demo `political_ads_bronze_demo.raw_f6c333bcf330ef62` với 2.629 dòng, không chạy `MERGE` trên BigQuery Sandbox; script demo từ chối project đã bật billing
 - Kiểm tra offline bằng `make check`; test có replay, sửa/xóa nguồn, checksum và quality gate
+
+## Tuần 5 — Warehouse và dbt Gold
+
+- Chạy `make week5` từ project root để refresh Bronze/Silver rồi build Gold; dbt-duckdb giới hạn 2 threads và 1 GB RAM
+- Gold có dimension advertiser/tuần, fact advertiser-tuần USD, mart trend, advertiser, BI và API; targeting chỉ có mart trạng thái nguồn vì chưa có Silver targeting
+- Xem [ERD, lineage, metric dictionary và cách kiểm tra](reports/week5/WEEK5.md)
+- dbt test đối chiếu spend từ Silver đến từng mart, kiểm tra key, quan hệ dimension, spend âm và ngày đầu tuần

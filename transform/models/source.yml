@@ -6,6 +6,11 @@ sources:
     tables:
       - name: weekly_raw
 
+  - name: silver
+    schema: silver
+    tables:
+      - name: weekly_current
+
 models:
   - name: stg_weekly
     columns:

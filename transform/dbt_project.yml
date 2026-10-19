@@ -10,3 +10,7 @@ test-paths: ["tests"]
 models:
   political_ads_week4:
     +materialized: view
+
+    gold:
+      +materialized: table
+      +tags: ["gold"]
