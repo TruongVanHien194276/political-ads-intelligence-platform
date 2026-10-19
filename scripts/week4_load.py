@@ -27,7 +27,19 @@ def sha256_file(path: Path) -> str:
 
 def main() -> None:
     DB.parent.mkdir(parents=True, exist_ok=True)
-    runs = sorted(ROOT.glob("source=*/table=*/week_start=*/run_id=*"))
+    week_filter = os.getenv("RAW_WEEK_START")
+
+    if week_filter:
+        # Airflow xử lý đúng partition ứng với logical date
+        runs = sorted(
+            ROOT.glob(
+                "source=google_political_ads/"
+                "table=advertiser_weekly_spend/"
+                f"week_start={week_filter}/run_id=*"
+            )
+        )
+    else:
+        runs = sorted(ROOT.glob("source=*/table=*/week_start=*/run_id=*"))
 
     if not runs:
         raise RuntimeError("Không thấy snapshot Tuần 3 trong data/raw")

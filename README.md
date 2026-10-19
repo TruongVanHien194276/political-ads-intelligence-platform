@@ -39,3 +39,8 @@
 - Chạy `make week6` để build trên candidate warehouse và chỉ publish khi schema, dbt tests và DQ scorecard đều đạt
 - Audit, quarantine reason, backup và bằng chứng rerun bốn kỳ được ghi trong [báo cáo Tuần 6](reports/week6/WEEK6.md)
 - Test offline kiểm tra source correction giữ history, schema drift, quarantine và lỗi critical không thay Silver/Gold đang dùng
+
+## Tuần 7 — Airflow local
+
+- DAG `political_ads_weekly` điều phối 5 bước trên raw snapshot local, giới hạn một task cùng lúc
+- Cách khởi động, backfill, retry, replay và xử lý sự cố: [runbook Tuần 7](reports/week7/WEEK7.md)
