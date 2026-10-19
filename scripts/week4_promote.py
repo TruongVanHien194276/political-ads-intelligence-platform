@@ -1,8 +1,14 @@
+import os
 from pathlib import Path
 
 import duckdb
 
-DB = Path("data/tmp/week4/warehouse.duckdb")
+DB = Path(
+    os.getenv(
+        "WAREHOUSE_DB_PATH",
+        "data/tmp/week4/warehouse.duckdb",
+    )
+)
 
 
 def count_for_run(con, table: str, run_id: str) -> int:

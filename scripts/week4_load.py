@@ -1,11 +1,17 @@
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import duckdb
 
 ROOT = Path("data/raw")
-DB = Path("data/tmp/week4/warehouse.duckdb")
+DB = Path(
+    os.getenv(
+        "WAREHOUSE_DB_PATH",
+        "data/tmp/week4/warehouse.duckdb",
+    )
+)
 
 
 def sha256_file(path: Path) -> str:

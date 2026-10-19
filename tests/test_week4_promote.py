@@ -59,14 +59,24 @@ def test_replay_and_corrected_snapshot_keep_current_unique() -> None:
 
     assert promote(con) == 2
     assert promote(con) == 2  # Replay cùng run không nhân đôi
+    con.execute("CREATE TABLE main.silver_history AS SELECT * FROM main.valid_weekly")
 
     # Snapshot mới sửa a, xóa b và thêm c
     add_run(con, "r2", "2026-10-19 00:00:00+00", [("a", 150), ("c", 300)])
+    # dbt rebuild history từ toàn bộ valid snapshots, không chỉ run mới nhất
+    con.execute(
+        "CREATE OR REPLACE TABLE main.silver_history AS SELECT * FROM main.valid_weekly"
+    )
     assert promote(con) == 2
     assert con.execute("""
         SELECT advertiser_id, amount_usd, run_id
         FROM silver.weekly_current ORDER BY advertiser_id
     """).fetchall() == [("a", 150, "r2"), ("c", 300, "r2")]
+    assert con.execute("""
+        SELECT run_id, count(*), sum(amount_usd)
+        FROM main.silver_history
+        GROUP BY run_id ORDER BY run_id
+    """).fetchall() == [("r1", 2, 300), ("r2", 2, 450)]
     assert promote(con) == 2
 
 

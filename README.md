@@ -33,3 +33,9 @@
 - Gold có dimension advertiser/tuần, fact advertiser-tuần USD, mart trend, advertiser, BI và API; targeting chỉ có mart trạng thái nguồn vì chưa có Silver targeting
 - Xem [ERD, lineage, metric dictionary và cách kiểm tra](reports/week5/WEEK5.md)
 - dbt test đối chiếu spend từ Silver đến từng mart, kiểm tra key, quan hệ dimension, spend âm và ngày đầu tuần
+
+## Tuần 6 — Data quality và backfill
+
+- Chạy `make week6` để build trên candidate warehouse và chỉ publish khi schema, dbt tests và DQ scorecard đều đạt
+- Audit, quarantine reason, backup và bằng chứng rerun bốn kỳ được ghi trong [báo cáo Tuần 6](reports/week6/WEEK6.md)
+- Test offline kiểm tra source correction giữ history, schema drift, quarantine và lỗi critical không thay Silver/Gold đang dùng
