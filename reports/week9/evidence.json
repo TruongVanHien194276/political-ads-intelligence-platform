@@ -1,0 +1,175 @@
+{
+  "warehouse_sha256": "c1a73d82801fbf856a58a07e56e0ec6a6856d7d2da002ee33b388984247a06b4",
+  "scope": "observed advertiser-week USD spend in loaded weeks, not US-only",
+  "metrics": {
+    "first_week": "2026-09-20",
+    "last_week": "2026-10-11",
+    "weeks_loaded": 4,
+    "fact_rows": 9699,
+    "distinct_advertisers": 3200,
+    "fact_total_usd": "268708700.00",
+    "last_week_wow_pct": -18.63,
+    "last_week_top10_share_pct": 29.23,
+    "last_week_hhi": 128.85,
+    "targeting_ready": false
+  },
+  "weekly_trend": [
+    {
+      "week_start_date": "2026-09-20T00:00:00.000",
+      "total_spend_usd": 57031900.0,
+      "advertiser_count": 1916,
+      "previous_spend_usd": null,
+      "wow_change_pct": null
+    },
+    {
+      "week_start_date": "2026-09-27T00:00:00.000",
+      "total_spend_usd": 66702400.0,
+      "advertiser_count": 2231,
+      "previous_spend_usd": 57031900.0,
+      "wow_change_pct": 16.96
+    },
+    {
+      "week_start_date": "2026-10-04T00:00:00.000",
+      "total_spend_usd": 79932300.0,
+      "advertiser_count": 2629,
+      "previous_spend_usd": 66702400.0,
+      "wow_change_pct": 19.83
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "total_spend_usd": 65042100.0,
+      "advertiser_count": 2923,
+      "previous_spend_usd": 79932300.0,
+      "wow_change_pct": -18.63
+    }
+  ],
+  "weekly_concentration": [
+    {
+      "week_start_date": "2026-09-20T00:00:00.000",
+      "top10_share_pct": 37.31,
+      "observed_hhi": 261.21
+    },
+    {
+      "week_start_date": "2026-09-27T00:00:00.000",
+      "top10_share_pct": 33.95,
+      "observed_hhi": 200.5
+    },
+    {
+      "week_start_date": "2026-10-04T00:00:00.000",
+      "top10_share_pct": 31.2,
+      "observed_hhi": 147.34
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "top10_share_pct": 29.23,
+      "observed_hhi": 128.85
+    }
+  ],
+  "latest_distribution": [
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "bucket_order": 1,
+      "spend_bucket": "< 1k USD",
+      "advertiser_count": 1359
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "bucket_order": 2,
+      "spend_bucket": "1k–10k USD",
+      "advertiser_count": 908
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "bucket_order": 3,
+      "spend_bucket": "10k–100k USD",
+      "advertiser_count": 547
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "bucket_order": 4,
+      "spend_bucket": "100k–1m USD",
+      "advertiser_count": 100
+    },
+    {
+      "week_start_date": "2026-10-11T00:00:00.000",
+      "bucket_order": 5,
+      "spend_bucket": "≥ 1m USD",
+      "advertiser_count": 9
+    }
+  ],
+  "mover_cohorts": {
+    "both_weeks": 2520,
+    "newly_observed": 403,
+    "not_observed_current": 109
+  },
+  "top_increase": [
+    {
+      "advertiser_id": "AR14216852687659466753",
+      "change_usd": 548700.0
+    },
+    {
+      "advertiser_id": "AR12716033824144752641",
+      "change_usd": 253600.0
+    },
+    {
+      "advertiser_id": "AR15050660931082125313",
+      "change_usd": 113300.0
+    },
+    {
+      "advertiser_id": "AR13526335024361635841",
+      "change_usd": 111000.0
+    },
+    {
+      "advertiser_id": "AR08508423439936126977",
+      "change_usd": 110500.0
+    }
+  ],
+  "top_decrease": [
+    {
+      "advertiser_id": "AR03821862303154831361",
+      "change_usd": -2034400.0
+    },
+    {
+      "advertiser_id": "AR03075253466482868225",
+      "change_usd": -1254900.0
+    },
+    {
+      "advertiser_id": "AR04155805347677732865",
+      "change_usd": -722400.0
+    },
+    {
+      "advertiser_id": "AR11902574500115382273",
+      "change_usd": -631500.0
+    },
+    {
+      "advertiser_id": "AR03482931719269515265",
+      "change_usd": -519500.0
+    }
+  ],
+  "targeting_status": [
+    {
+      "required_source": "campaign_targeting",
+      "data_status": "SOURCE_EMPTY_AT_LAST_CHECK",
+      "targeting_metrics_ready": false,
+      "source_checked_on": "2026-10-17T00:00:00.000",
+      "latest_loaded_week": "2026-10-11T00:00:00.000",
+      "reason": "Bảng nguồn rỗng theo inventory Tuần 1"
+    },
+    {
+      "required_source": "creative_stats",
+      "data_status": "NOT_INGESTED",
+      "targeting_metrics_ready": false,
+      "source_checked_on": "2026-10-17T00:00:00.000",
+      "latest_loaded_week": "2026-10-11T00:00:00.000",
+      "reason": "Silver hiện chỉ có advertiser_weekly_spend"
+    }
+  ],
+  "query_sha256": {
+    "01_trend": "24e4337bc8c0b19287676bf7cb264a4d75f7d4cba9b5c42ab6883395d2463435",
+    "02_concentration": "e310123d698d05a6b5137c789f73f5cc959ee922b2b768a1a17d8f9364ea8911",
+    "03_distribution": "88efe12ea73c7dc1800b5fafc28efd361472c031ba4e2f0ca83776aa0d1be6cd",
+    "04_distribution_summary": "95ba2a4abb9bb5531707942ad4b6cfee74d4bf3af960b4859994a697808df68b",
+    "05_movers": "b5d4f8fbdcc7afeb6b03c5316c730c4ebc2f29601910b8ed30fe17f48cb65dc3",
+    "06_targeting_status": "9df548a7cbb1ed6d34963c6d036570f452ac6a9401ecfb2c60fdb281e5e828e3"
+  }
+}

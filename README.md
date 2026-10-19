@@ -51,3 +51,9 @@
 - `make check`, `terraform validate` và image smoke test chạy offline; chưa deploy vì project không bật billing theo lựa chọn của chủ project
 - Lịch Terraform mặc định `paused = true`, runtime mặc định tắt; chưa có cloud run IDs hoặc bằng chứng chạy nguồn đến Gold không cần Mac
 - Sơ đồ triển khai, IAM, chi phí, runbook và tiêu chí nghiệm thu cloud: [Tuần 8](reports/week8/WEEK8.md)
+
+## Tuần 9 — Business insights
+
+- Chạy `make week9` sau khi đã có Gold local để tạo SQL, evidence JSON, 5 biểu đồ PNG và HTML tương tác
+- [Báo cáo Tuần 9](reports/week9/WEEK9.md) có 5 insight, kỳ so sánh, số đo, SQL và giới hạn suy luận
+- Biểu đồ tĩnh được commit; HTML và Plotly.js tạo lại local để tránh đưa bundle lớn vào Git

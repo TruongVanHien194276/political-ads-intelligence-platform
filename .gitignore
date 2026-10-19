@@ -23,6 +23,8 @@ models/checkpoints/
 .DS_Store
 .terraform/
 build/
+reports/week9/charts/*.html
+reports/week9/charts/plotly.min.js
 *.tfstate
 *.tfstate.*
 *.tfplan

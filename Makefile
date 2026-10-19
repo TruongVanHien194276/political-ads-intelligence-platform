@@ -1,4 +1,4 @@
-.PHONY: check fmt test week4 week5 week6
+.PHONY: check fmt test week4 week5 week6 week9
 
 check:
 	python -m ruff check .
@@ -22,3 +22,6 @@ week5: week4
 
 week6:
 	.venv/bin/python scripts/week6_publish.py
+
+week9:
+	.venv/bin/python scripts/week9_analysis.py
