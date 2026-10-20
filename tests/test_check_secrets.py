@@ -3,8 +3,15 @@ from scripts.check_secrets import scan_file
 
 def test_scanner_catches_key_and_credential_filename(tmp_path) -> None:
     key = tmp_path / "service-account.json"
-    key.write_text('{"type": "service_account", "private_key": "x"}')
-    assert scan_file(key) == ["credential filename", "Google service account key"]
+    key.write_text(
+        '{"type": "service_account", "private_key": "-----BEGIN '
+        'PRIVATE KEY-----\\nexample"}'
+    )
+    assert scan_file(key) == [
+        "credential filename",
+        "Google service account key",
+        "private key",
+    ]
 
     env = tmp_path / ".env"
     env.write_text("PUBLIC_VALUE=1")

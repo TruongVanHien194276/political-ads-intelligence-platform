@@ -1,13 +1,13 @@
 {
-  "warehouse_sha256": "c1a73d82801fbf856a58a07e56e0ec6a6856d7d2da002ee33b388984247a06b4",
+  "warehouse_sha256": "a70fa257fd8b4c3cf1119ffeec76e52a3aa6a46f105dba22d74392534a8ec7f6",
   "scope": "observed advertiser-week USD spend in loaded weeks, not US-only",
   "metrics": {
-    "first_week": "2026-09-20",
+    "first_week": "2026-05-31",
     "last_week": "2026-10-11",
-    "weeks_loaded": 4,
-    "fact_rows": 9699,
-    "distinct_advertisers": 3200,
-    "fact_total_usd": "268708700.00",
+    "weeks_loaded": 20,
+    "fact_rows": 31453,
+    "distinct_advertisers": 5060,
+    "fact_total_usd": "609155500.00",
     "last_week_wow_pct": -18.63,
     "last_week_top10_share_pct": 29.23,
     "last_week_hhi": 128.85,
@@ -15,11 +15,123 @@
   },
   "weekly_trend": [
     {
+      "week_start_date": "2026-05-31T00:00:00.000",
+      "total_spend_usd": 15319500.0,
+      "advertiser_count": 1639,
+      "previous_spend_usd": null,
+      "wow_change_pct": null
+    },
+    {
+      "week_start_date": "2026-06-07T00:00:00.000",
+      "total_spend_usd": 13304900.0,
+      "advertiser_count": 1339,
+      "previous_spend_usd": 15319500.0,
+      "wow_change_pct": -13.15
+    },
+    {
+      "week_start_date": "2026-06-14T00:00:00.000",
+      "total_spend_usd": 16248200.0,
+      "advertiser_count": 1303,
+      "previous_spend_usd": 13304900.0,
+      "wow_change_pct": 22.12
+    },
+    {
+      "week_start_date": "2026-06-21T00:00:00.000",
+      "total_spend_usd": 14441000.0,
+      "advertiser_count": 1268,
+      "previous_spend_usd": 16248200.0,
+      "wow_change_pct": -11.12
+    },
+    {
+      "week_start_date": "2026-06-28T00:00:00.000",
+      "total_spend_usd": 12806300.0,
+      "advertiser_count": 1126,
+      "previous_spend_usd": 14441000.0,
+      "wow_change_pct": -11.32
+    },
+    {
+      "week_start_date": "2026-07-05T00:00:00.000",
+      "total_spend_usd": 10438000.0,
+      "advertiser_count": 1152,
+      "previous_spend_usd": 12806300.0,
+      "wow_change_pct": -18.49
+    },
+    {
+      "week_start_date": "2026-07-12T00:00:00.000",
+      "total_spend_usd": 13865800.0,
+      "advertiser_count": 1264,
+      "previous_spend_usd": 10438000.0,
+      "wow_change_pct": 32.84
+    },
+    {
+      "week_start_date": "2026-07-19T00:00:00.000",
+      "total_spend_usd": 14430900.0,
+      "advertiser_count": 1361,
+      "previous_spend_usd": 13865800.0,
+      "wow_change_pct": 4.08
+    },
+    {
+      "week_start_date": "2026-07-26T00:00:00.000",
+      "total_spend_usd": 17868900.0,
+      "advertiser_count": 1417,
+      "previous_spend_usd": 14430900.0,
+      "wow_change_pct": 23.82
+    },
+    {
+      "week_start_date": "2026-08-02T00:00:00.000",
+      "total_spend_usd": 18605900.0,
+      "advertiser_count": 1476,
+      "previous_spend_usd": 17868900.0,
+      "wow_change_pct": 4.12
+    },
+    {
+      "week_start_date": "2026-08-09T00:00:00.000",
+      "total_spend_usd": 21157200.0,
+      "advertiser_count": 1370,
+      "previous_spend_usd": 18605900.0,
+      "wow_change_pct": 13.71
+    },
+    {
+      "week_start_date": "2026-08-16T00:00:00.000",
+      "total_spend_usd": 24060200.0,
+      "advertiser_count": 1348,
+      "previous_spend_usd": 21157200.0,
+      "wow_change_pct": 13.72
+    },
+    {
+      "week_start_date": "2026-08-23T00:00:00.000",
+      "total_spend_usd": 27541700.0,
+      "advertiser_count": 1271,
+      "previous_spend_usd": 24060200.0,
+      "wow_change_pct": 14.47
+    },
+    {
+      "week_start_date": "2026-08-30T00:00:00.000",
+      "total_spend_usd": 30519600.0,
+      "advertiser_count": 1331,
+      "previous_spend_usd": 27541700.0,
+      "wow_change_pct": 10.81
+    },
+    {
+      "week_start_date": "2026-09-06T00:00:00.000",
+      "total_spend_usd": 37339300.0,
+      "advertiser_count": 1439,
+      "previous_spend_usd": 30519600.0,
+      "wow_change_pct": 22.35
+    },
+    {
+      "week_start_date": "2026-09-13T00:00:00.000",
+      "total_spend_usd": 52499400.0,
+      "advertiser_count": 1650,
+      "previous_spend_usd": 37339300.0,
+      "wow_change_pct": 40.6
+    },
+    {
       "week_start_date": "2026-09-20T00:00:00.000",
       "total_spend_usd": 57031900.0,
       "advertiser_count": 1916,
-      "previous_spend_usd": null,
-      "wow_change_pct": null
+      "previous_spend_usd": 52499400.0,
+      "wow_change_pct": 8.63
     },
     {
       "week_start_date": "2026-09-27T00:00:00.000",
@@ -44,6 +156,86 @@
     }
   ],
   "weekly_concentration": [
+    {
+      "week_start_date": "2026-05-31T00:00:00.000",
+      "top10_share_pct": 30.94,
+      "observed_hhi": 153.99
+    },
+    {
+      "week_start_date": "2026-06-07T00:00:00.000",
+      "top10_share_pct": 36.8,
+      "observed_hhi": 305.6
+    },
+    {
+      "week_start_date": "2026-06-14T00:00:00.000",
+      "top10_share_pct": 39.37,
+      "observed_hhi": 442.57
+    },
+    {
+      "week_start_date": "2026-06-21T00:00:00.000",
+      "top10_share_pct": 37.59,
+      "observed_hhi": 350.59
+    },
+    {
+      "week_start_date": "2026-06-28T00:00:00.000",
+      "top10_share_pct": 51.46,
+      "observed_hhi": 684.37
+    },
+    {
+      "week_start_date": "2026-07-05T00:00:00.000",
+      "top10_share_pct": 45.64,
+      "observed_hhi": 463.47
+    },
+    {
+      "week_start_date": "2026-07-12T00:00:00.000",
+      "top10_share_pct": 43.61,
+      "observed_hhi": 387.19
+    },
+    {
+      "week_start_date": "2026-07-19T00:00:00.000",
+      "top10_share_pct": 33.76,
+      "observed_hhi": 162.84
+    },
+    {
+      "week_start_date": "2026-07-26T00:00:00.000",
+      "top10_share_pct": 32.96,
+      "observed_hhi": 164.97
+    },
+    {
+      "week_start_date": "2026-08-02T00:00:00.000",
+      "top10_share_pct": 31.39,
+      "observed_hhi": 156.97
+    },
+    {
+      "week_start_date": "2026-08-09T00:00:00.000",
+      "top10_share_pct": 33.9,
+      "observed_hhi": 163.34
+    },
+    {
+      "week_start_date": "2026-08-16T00:00:00.000",
+      "top10_share_pct": 34.58,
+      "observed_hhi": 164.15
+    },
+    {
+      "week_start_date": "2026-08-23T00:00:00.000",
+      "top10_share_pct": 34.89,
+      "observed_hhi": 176.35
+    },
+    {
+      "week_start_date": "2026-08-30T00:00:00.000",
+      "top10_share_pct": 39.16,
+      "observed_hhi": 198.51
+    },
+    {
+      "week_start_date": "2026-09-06T00:00:00.000",
+      "top10_share_pct": 45.11,
+      "observed_hhi": 300.3
+    },
+    {
+      "week_start_date": "2026-09-13T00:00:00.000",
+      "top10_share_pct": 45.52,
+      "observed_hhi": 452.92
+    },
     {
       "week_start_date": "2026-09-20T00:00:00.000",
       "top10_share_pct": 37.31,

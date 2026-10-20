@@ -1,4 +1,4 @@
-# Python 3.13; keep this separate from the pipeline's Python 3.14 venv
+# Python 3.13; separate from the pipeline's Python 3.14 venv
 duckdb==1.5.6
 lightgbm==4.7.0
 matplotlib==3.11.2
