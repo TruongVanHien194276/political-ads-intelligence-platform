@@ -68,5 +68,6 @@
 
 - Gold đã có 20 tuần liên tiếp; `make week11` chạy rolling one-week-ahead backtest với 4 folds, naive và LightGBM point/quantile trong venv Python 3.13 riêng
 - [Báo cáo Tuần 11](reports/week11/WEEK11.md) có leaderboard, 4 biểu đồ và [evidence JSON](reports/week11/evidence.json) với hash nguồn/SQL/predictions
+- `make week12` so naive, LightGBM, TFT nhỏ và Chronos-2-small trên đúng 578 test rows; [báo cáo Tuần 12](reports/week12/WEEK12.md) có model card, 3 biểu đồ và [evidence JSON](reports/week12/evidence.json); chưa model mới nào qua promotion gate nên giữ naive
 - Naive thắng LightGBM về MAE/WAPE trên cùng 578 test rows; đây là baseline thử nghiệm, không phải model production
 - Workbook Power BI Tuần 10 được export trước backfill nên cần tạo lại nếu tiếp tục dashboard

@@ -1,4 +1,4 @@
-.PHONY: check fmt test week4 week5 week6 week9 week10 week11
+.PHONY: check fmt test week4 week5 week6 week9 week10 week11 week12
 
 check:
 	python -m ruff check .
@@ -33,3 +33,12 @@ week10:
 week11:
 	data/tmp/week11/venv/bin/python scripts/week11_train.py
 	data/tmp/week11/venv/bin/python scripts/week11_evidence.py
+
+week12:
+	data/tmp/week11/venv/bin/python scripts/week12_benchmark_baselines.py --model naive
+	data/tmp/week11/venv/bin/python scripts/week12_benchmark_baselines.py --model lightgbm
+	OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 /usr/bin/time -l data/tmp/week12/venv/bin/python scripts/week12_tft.py 2> data/tmp/week12/tft_time.txt
+	OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 HF_HOME="$(CURDIR)/data/tmp/week12/hf-cache" /usr/bin/time -l data/tmp/week12/venv/bin/python scripts/week12_chronos.py 2> data/tmp/week12/chronos_time.txt
+	data/tmp/week12/venv/bin/python scripts/week12_evaluate.py
+	data/tmp/week12/venv/bin/python scripts/week12_charts.py
+	data/tmp/week12/venv/bin/python scripts/week12_evidence.py

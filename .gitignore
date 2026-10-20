@@ -11,6 +11,7 @@ __pycache__/
 .user.yml
 target/
 logs/
+lightning_logs/
 data/raw/
 data/tmp/
 data/exports/

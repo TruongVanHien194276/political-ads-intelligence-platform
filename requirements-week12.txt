@@ -1,0 +1,14 @@
+chronos-forecasting==2.3.2
+duckdb==1.5.6
+huggingface-hub==2.2.0
+lightning==2.6.6
+matplotlib==3.11.2
+mlflow==3.17.1
+numpy==2.5.4
+pandas==3.0.6
+pyarrow==25.0.1
+psutil==7.2.2
+pytorch-forecasting==1.8.0
+scikit-learn==1.9.1
+seaborn==0.13.2
+torch==2.14.1
