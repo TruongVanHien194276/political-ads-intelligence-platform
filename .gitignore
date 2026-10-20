@@ -12,6 +12,7 @@ __pycache__/
 target/
 logs/
 lightning_logs/
+mlruns/
 data/raw/
 data/tmp/
 data/exports/

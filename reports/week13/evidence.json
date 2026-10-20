@@ -1,0 +1,74 @@
+{
+  "warehouse_sha256": "c1ef8120b6362897c473f8e2af36b5c8fb0a2f7d90d8420a3479c9b0b39f6d92",
+  "week12_evidence_sha256": "a15fe11689f3ab205f05eccf54ac92897547084e11f8ad3c9526d0f0d0d8ed41",
+  "runs": [
+    {
+      "run_id": "549b5e12a0e4ecbd7bfe8bb4",
+      "data_cutoff_week": "2026-10-04",
+      "target_week": "2026-10-11",
+      "model_name": "political_ads_weekly_spend_naive",
+      "model_version": "2",
+      "model_run_id": "1946d7491e4b4b828841c31700e53611",
+      "source_fingerprint": "8cee33256b44af5c7dbb97402a06bc9a5ca24d7e56dcd3fb360daa02e531dd96",
+      "cohort_size": 100,
+      "scored_count": 74,
+      "abstained_count": 26,
+      "run_mode": "RETROSPECTIVE"
+    },
+    {
+      "run_id": "97cf3dafeea851c7f1275051",
+      "data_cutoff_week": "2026-10-11",
+      "target_week": "2026-10-18",
+      "model_name": "political_ads_weekly_spend_naive",
+      "model_version": "1",
+      "model_run_id": "40bfe1bed094414ba02afdc383cf15f7",
+      "source_fingerprint": "0ade3482311e73f4f4e9b9a5b632fa247cee7c49cf73e7a13f327d58176e04ae",
+      "cohort_size": 100,
+      "scored_count": 73,
+      "abstained_count": 27,
+      "run_mode": "LIVE"
+    }
+  ],
+  "counts": {
+    "forecast_runs": 2,
+    "forecast_history": 147,
+    "forecast_evaluations": 73,
+    "forecast_alerts": 1,
+    "drift_checks": 2
+  },
+  "registry": {
+    "champion_version": 1,
+    "champion_run_id": "40bfe1bed094414ba02afdc383cf15f7",
+    "registered_versions": 2
+  },
+  "live_latest": {
+    "scored_count": 73,
+    "total_point_usd": 12044200.0
+  },
+  "duplicate_forecast_ids": 0,
+  "pending_live_actuals": 73,
+  "retrospective": {
+    "matched_rows": 73,
+    "mae_usd": 66401.3698630137,
+    "wape": 0.40245927500373624,
+    "coverage_80": 0.6164383561643836
+  },
+  "drift": [
+    {
+      "run_id": "549b5e12a0e4ecbd7bfe8bb4",
+      "psi": 0.03701607645042928,
+      "status": "OK"
+    },
+    {
+      "run_id": "97cf3dafeea851c7f1275051",
+      "psi": 0.09064757349864899,
+      "status": "OK"
+    }
+  ],
+  "live_target_has_actual": false,
+  "charts": [
+    "live_forecast_interval.png",
+    "retro_actual_vs_forecast.png",
+    "retro_residuals.png"
+  ]
+}

@@ -71,3 +71,10 @@
 - `make week12` so naive, LightGBM, TFT nhỏ và Chronos-2-small trên đúng 578 test rows; [báo cáo Tuần 12](reports/week12/WEEK12.md) có model card, 3 biểu đồ và [evidence JSON](reports/week12/evidence.json); chưa model mới nào qua promotion gate nên giữ naive
 - Naive thắng LightGBM về MAE/WAPE trên cùng 578 test rows; đây là baseline thử nghiệm, không phải model production
 - Workbook Power BI Tuần 10 được export trước backfill nên cần tạo lại nếu tiếp tục dashboard
+
+## Tuần 13 — Registry, batch forecast và drift
+
+- `make week13` chạy local quality-gated MLflow registration, batch score, monitor và lưu bằng chứng; dùng Python 3.13 venv Tuần 11
+- [Báo cáo Tuần 13](reports/week13/WEEK13.md) có model card, forecast mart, 3 biểu đồ PNG và [evidence JSON](reports/week13/evidence.json)
+- Live cutoff 2026-10-11 dự đoán tuần 2026-10-18 cho 73 advertiser; 27 advertiser thiếu dữ liệu được abstain, actual live chưa có trong Gold
+- Power BI Cloud Forecast page chưa tạo trên đúng tài khoản; ảnh đã lưu chỉ là biểu đồ local, không phải screenshot Power BI
