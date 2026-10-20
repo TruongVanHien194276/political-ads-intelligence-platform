@@ -1,0 +1,92 @@
+{
+  "status": "PASS_EXPERIMENTAL_BACKTEST",
+  "batch_run_id": "a4a11d9ff0254483a263a2c4a2c050c8",
+  "mlflow_runs": 8,
+  "warehouse_sha256": "c1ef8120b6362897c473f8e2af36b5c8fb0a2f7d90d8420a3479c9b0b39f6d92",
+  "feature_sql_sha256": "08c43f92889d23412c9bb93566d0488d17ac4faf7a204266b87b237d139fcf2e",
+  "predictions_sha256": "308d7700e5af3cc43505b3f731a54d51a88ab7bf3aeea9837ab5209ad2033907",
+  "scope": "observed advertiser-week USD spend",
+  "evaluation_protocol": "Rolling one-week-ahead: actual from first test week may be used as a lag for the second test week; model weights remain fixed within each two-week fold",
+  "weeks_available": 20,
+  "cohort_advertisers": 100,
+  "same_test_keys": true,
+  "missing_week_policy": "NULL, never zero",
+  "folds": [
+    {
+      "fold": 1,
+      "train_end": "2026-08-16",
+      "test_weeks": [
+        "2026-08-23",
+        "2026-08-30"
+      ],
+      "train_rows": 746,
+      "test_rows": 150,
+      "test_advertisers": 75
+    },
+    {
+      "fold": 2,
+      "train_end": "2026-08-30",
+      "test_weeks": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "train_rows": 896,
+      "test_rows": 145,
+      "test_advertisers": 75
+    },
+    {
+      "fold": 3,
+      "train_end": "2026-09-13",
+      "test_weeks": [
+        "2026-09-20",
+        "2026-09-27"
+      ],
+      "train_rows": 1041,
+      "test_rows": 144,
+      "test_advertisers": 72
+    },
+    {
+      "fold": 4,
+      "train_end": "2026-09-27",
+      "test_weeks": [
+        "2026-10-04",
+        "2026-10-11"
+      ],
+      "train_rows": 1185,
+      "test_rows": 139,
+      "test_advertisers": 70
+    }
+  ],
+  "leaderboard": [
+    {
+      "model": "naive_last_week",
+      "test_rows": 578,
+      "mae": 61753.28719723183,
+      "wape": 0.3267103520428664,
+      "mase": 1.9300018084633603,
+      "pinball_p10": 25126.88581314879,
+      "pinball_p50": 30876.816608996534,
+      "pinball_p90": 30097.842560553632,
+      "coverage_80": 0.726643598615917,
+      "mean_interval_width_usd": 46484.30795847751
+    },
+    {
+      "model": "lightgbm_point_quantile",
+      "test_rows": 578,
+      "mae": 88729.07278305106,
+      "wape": 0.4694277490492391,
+      "mase": 2.702338716192184,
+      "pinball_p10": 14360.043233017625,
+      "pinball_p50": 44455.561790684704,
+      "pinball_p90": 40829.95048462525,
+      "coverage_80": 0.754325259515571,
+      "mean_interval_width_usd": 168726.15290158128
+    }
+  ],
+  "charts": [
+    "01_leaderboard.png",
+    "02_fold_mae.png",
+    "03_interval_coverage.png",
+    "04_actual_vs_forecast.png"
+  ]
+}
