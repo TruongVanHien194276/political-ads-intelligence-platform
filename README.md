@@ -57,3 +57,9 @@
 - Chạy `make week9` sau khi đã có Gold local để tạo SQL, evidence JSON, 5 biểu đồ PNG và HTML tương tác
 - [Báo cáo Tuần 9](reports/week9/WEEK9.md) có 5 insight, kỳ so sánh, số đo, SQL và giới hạn suy luận
 - Biểu đồ tĩnh được commit; HTML và Plotly.js tạo lại local để tránh đưa bundle lớn vào Git
+
+## Tuần 10 — Power BI Cloud (chưa nghiệm thu cloud)
+
+- `make week10` tạo Excel snapshot local, đối soát 6 KPI với Gold và lưu biểu đồ + evidence có thể xem trên GitHub
+- [Báo cáo Tuần 10](reports/week10/WEEK10.md) có mô hình, DAX, thiết kế 4 trang và ghi rõ phần Power BI chưa làm trên đúng tài khoản
+- Chưa upload vào Power BI vì phiên browser hiện tại đăng nhập tài khoản khác; chưa có report hoặc screenshot Power BI thật

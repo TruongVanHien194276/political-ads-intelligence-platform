@@ -1,0 +1,64 @@
+{
+  "status": "PASS_LOCAL_ONLY",
+  "power_bi_status": "NOT_VERIFIED",
+  "refresh_mode": "STATIC_SNAPSHOT",
+  "workbook": "political_ads_gold_2026-10-11.xlsx",
+  "workbook_sha256": "2bfdc7ff966423ee20d70a5c6df93b4ae7c254e128bb57e10d44e6b024f644aa",
+  "warehouse_sha256": "c1a73d82801fbf856a58a07e56e0ec6a6856d7d2da002ee33b388984247a06b4",
+  "period": [
+    "2026-09-20",
+    "2026-10-11"
+  ],
+  "dq_passed": 16,
+  "dq_total": 16,
+  "checks": {
+    "fact_rows": {
+      "excel": "9699",
+      "sql": "9699",
+      "match": true
+    },
+    "total_spend_usd": {
+      "excel": "268708700",
+      "sql": "268708700.00",
+      "match": true
+    },
+    "distinct_advertisers": {
+      "excel": "3200",
+      "sql": "3200",
+      "match": true
+    },
+    "latest_week_spend_usd": {
+      "excel": "65042100",
+      "sql": "65042100.00",
+      "match": true
+    },
+    "latest_week_advertisers": {
+      "excel": "2923",
+      "sql": "2923",
+      "match": true
+    },
+    "latest_week_top10_spend_usd": {
+      "excel": "19011200",
+      "sql": "19011200.00",
+      "match": true
+    }
+  },
+  "weekly_spend": [
+    {
+      "week_start": "2026-09-20",
+      "spend_usd": "57031900"
+    },
+    {
+      "week_start": "2026-09-27",
+      "spend_usd": "66702400"
+    },
+    {
+      "week_start": "2026-10-04",
+      "spend_usd": "79932300"
+    },
+    {
+      "week_start": "2026-10-11",
+      "spend_usd": "65042100"
+    }
+  ]
+}
