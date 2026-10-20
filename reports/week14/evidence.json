@@ -1,0 +1,35 @@
+{
+  "status": "PASS_LOCAL_API_SQL",
+  "power_bi_status": "NOT_VERIFIED",
+  "cloud_bigquery_status": "NOT_DEPLOYED_BILLING_OFF",
+  "generated_at_utc": "2026-10-20T17:00:47.480635+00:00",
+  "warehouse_sha256": "c1ef8120b6362897c473f8e2af36b5c8fb0a2f7d90d8420a3479c9b0b39f6d92",
+  "forecast_sha256": "198d72d4b003aeff9e3aa68ab62de096d02c91e69281926f94253f2e54808b3b",
+  "week_filter": "2026-10-11",
+  "checks": {
+    "latest_week_spend_usd": {
+      "sql": 65042100.0,
+      "api": 65042100.0,
+      "match": true
+    },
+    "latest_week_advertisers": {
+      "sql": 2923,
+      "api": 2923,
+      "match": true
+    },
+    "loaded_total_spend_usd": {
+      "sql": 609155500.0,
+      "api": 609155500.0,
+      "match": true
+    }
+  },
+  "endpoint_http_status": {
+    "overview": 200,
+    "trends": 200,
+    "advertisers": 200,
+    "geography": 200,
+    "forecasts": 200,
+    "pipeline_health": 200
+  },
+  "notes": "Power BI tuần 10 là snapshot cũ; chưa thể xác nhận API = Power BI"
+}

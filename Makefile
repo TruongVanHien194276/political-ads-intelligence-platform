@@ -1,4 +1,4 @@
-.PHONY: check fmt test week4 week5 week6 week9 week10 week11 week12 week13
+.PHONY: check fmt test week4 week5 week6 week9 week10 week11 week12 week13 week14
 
 check:
 	python -m ruff check .
@@ -46,3 +46,7 @@ week12:
 week13:
 	data/tmp/week11/venv/bin/python scripts/week13_batch.py --include-retrospective
 	data/tmp/week11/venv/bin/python scripts/week13_evidence.py
+
+week14:
+	.venv/bin/python -m pytest tests/test_api_week14.py tests/test_api_pipeline_health.py -q
+	.venv/bin/python -m scripts.week14_evidence

@@ -1,0 +1,76 @@
+{
+  "overview": {
+    "week_start_date": "2026-10-11",
+    "total_spend_usd": 65042100.0,
+    "advertiser_count": 2923,
+    "wow_change_pct": -18.63,
+    "loaded_total_spend_usd": 609155500.0,
+    "loaded_advertisers": 5060
+  },
+  "trends": [
+    {
+      "week_start_date": "2026-09-27",
+      "total_spend_usd": 66702400.0,
+      "advertiser_count": 2231,
+      "wow_change_pct": 16.96
+    },
+    {
+      "week_start_date": "2026-10-04",
+      "total_spend_usd": 79932300.0,
+      "advertiser_count": 2629,
+      "wow_change_pct": 19.83
+    },
+    {
+      "week_start_date": "2026-10-11",
+      "total_spend_usd": 65042100.0,
+      "advertiser_count": 2923,
+      "wow_change_pct": -18.63
+    }
+  ],
+  "advertisers": {
+    "items": [
+      {
+        "advertiser_id": "AR03821862303154831361",
+        "advertiser_name": "Kalshi Inc",
+        "total_spend_usd": 55129100.0,
+        "weeks_observed": 20,
+        "last_observed_week": "2026-10-11",
+        "share_of_observed_spend_pct": 9.0501,
+        "spend_rank": 1
+      }
+    ],
+    "limit": 1,
+    "offset": 0,
+    "has_more": true
+  },
+  "geography": {
+    "available": false,
+    "reason": "Gold hiện chưa có geo mart; không có số liệu spend theo địa lý để trả"
+  },
+  "forecasts": {
+    "items": [
+      {
+        "advertiser_id": "AR03821862303154831361",
+        "data_cutoff_week": "2026-10-11",
+        "target_week": "2026-10-18",
+        "point": 3707500.0,
+        "p10": 3681330.0,
+        "p50": 3707600.0,
+        "p90": 3743920.0,
+        "model_version": "1",
+        "model_run_id": "40bfe1bed094414ba02afdc383cf15f7",
+        "actual_usd": null
+      }
+    ],
+    "limit": 1,
+    "offset": 0,
+    "has_more": true
+  },
+  "pipeline_health": {
+    "run_id": "134a195e3edd",
+    "finished_at_utc": "2026-10-20T05:18:48.646557Z",
+    "status": "PASS",
+    "blocking_failures": 0,
+    "gold_latest_week": "2026-10-11"
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Political Ads Intelligence API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Healthz",
+        "operationId": "healthz_healthz_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/overview": {
+      "get": {
+        "summary": "Overview",
+        "operationId": "overview_api_v1_overview_get",
+        "parameters": [
+          {
+            "name": "week",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Week"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Overview"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/trends": {
+      "get": {
+        "summary": "Trends",
+        "operationId": "trends_api_v1_trends_get",
+        "parameters": [
+          {
+            "name": "from_week",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "From Week"
+            }
+          },
+          {
+            "name": "to_week",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "To Week"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 104,
+              "minimum": 1,
+              "default": 52,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Trend"
+                  },
+                  "title": "Response Trends Api V1 Trends Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/advertisers": {
+      "get": {
+        "summary": "Advertisers",
+        "operationId": "advertisers_api_v1_advertisers_get",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "spend_desc",
+                "name_asc"
+              ],
+              "type": "string",
+              "default": "spend_desc",
+              "title": "Sort"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 10000,
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdvertiserPage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/advertisers/{advertiser_id}": {
+      "get": {
+        "summary": "Advertiser Detail",
+        "operationId": "advertiser_detail_api_v1_advertisers__advertiser_id__get",
+        "parameters": [
+          {
+            "name": "advertiser_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,80}$",
+              "title": "Advertiser Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Advertiser"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/geography": {
+      "get": {
+        "summary": "Geography",
+        "operationId": "geography_api_v1_geography_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeographyStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/forecasts": {
+      "get": {
+        "summary": "Forecasts",
+        "operationId": "forecasts_api_v1_forecasts_get",
+        "parameters": [
+          {
+            "name": "target_week",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Target Week"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 10000,
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForecastPage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/pipeline-health": {
+      "get": {
+        "summary": "Pipeline Health",
+        "operationId": "pipeline_health_api_v1_pipeline_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PipelineHealth"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Advertiser": {
+        "properties": {
+          "advertiser_id": {
+            "type": "string",
+            "title": "Advertiser Id"
+          },
+          "advertiser_name": {
+            "type": "string",
+            "title": "Advertiser Name"
+          },
+          "total_spend_usd": {
+            "type": "number",
+            "title": "Total Spend Usd"
+          },
+          "weeks_observed": {
+            "type": "integer",
+            "title": "Weeks Observed"
+          },
+          "last_observed_week": {
+            "type": "string",
+            "format": "date",
+            "title": "Last Observed Week"
+          },
+          "share_of_observed_spend_pct": {
+            "type": "number",
+            "title": "Share Of Observed Spend Pct"
+          },
+          "spend_rank": {
+            "type": "integer",
+            "title": "Spend Rank"
+          }
+        },
+        "type": "object",
+        "required": [
+          "advertiser_id",
+          "advertiser_name",
+          "total_spend_usd",
+          "weeks_observed",
+          "last_observed_week",
+          "share_of_observed_spend_pct",
+          "spend_rank"
+        ],
+        "title": "Advertiser"
+      },
+      "AdvertiserPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Advertiser"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "has_more": {
+            "type": "boolean",
+            "title": "Has More"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "limit",
+          "offset",
+          "has_more"
+        ],
+        "title": "AdvertiserPage"
+      },
+      "Forecast": {
+        "properties": {
+          "advertiser_id": {
+            "type": "string",
+            "title": "Advertiser Id"
+          },
+          "data_cutoff_week": {
+            "type": "string",
+            "format": "date",
+            "title": "Data Cutoff Week"
+          },
+          "target_week": {
+            "type": "string",
+            "format": "date",
+            "title": "Target Week"
+          },
+          "point": {
+            "type": "number",
+            "title": "Point"
+          },
+          "p10": {
+            "type": "number",
+            "title": "P10"
+          },
+          "p50": {
+            "type": "number",
+            "title": "P50"
+          },
+          "p90": {
+            "type": "number",
+            "title": "P90"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "model_run_id": {
+            "type": "string",
+            "title": "Model Run Id"
+          },
+          "actual_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actual Usd"
+          }
+        },
+        "type": "object",
+        "required": [
+          "advertiser_id",
+          "data_cutoff_week",
+          "target_week",
+          "point",
+          "p10",
+          "p50",
+          "p90",
+          "model_version",
+          "model_run_id",
+          "actual_usd"
+        ],
+        "title": "Forecast"
+      },
+      "ForecastPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Forecast"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "has_more": {
+            "type": "boolean",
+            "title": "Has More"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "limit",
+          "offset",
+          "has_more"
+        ],
+        "title": "ForecastPage"
+      },
+      "GeographyStatus": {
+        "properties": {
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "available",
+          "reason"
+        ],
+        "title": "GeographyStatus"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Overview": {
+        "properties": {
+          "week_start_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Week Start Date"
+          },
+          "total_spend_usd": {
+            "type": "number",
+            "title": "Total Spend Usd"
+          },
+          "advertiser_count": {
+            "type": "integer",
+            "title": "Advertiser Count"
+          },
+          "wow_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wow Change Pct"
+          },
+          "loaded_total_spend_usd": {
+            "type": "number",
+            "title": "Loaded Total Spend Usd"
+          },
+          "loaded_advertisers": {
+            "type": "integer",
+            "title": "Loaded Advertisers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "week_start_date",
+          "total_spend_usd",
+          "advertiser_count",
+          "wow_change_pct",
+          "loaded_total_spend_usd",
+          "loaded_advertisers"
+        ],
+        "title": "Overview"
+      },
+      "PipelineHealth": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "finished_at_utc": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Finished At Utc"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "blocking_failures": {
+            "type": "integer",
+            "title": "Blocking Failures"
+          },
+          "gold_latest_week": {
+            "type": "string",
+            "format": "date",
+            "title": "Gold Latest Week"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "finished_at_utc",
+          "status",
+          "blocking_failures",
+          "gold_latest_week"
+        ],
+        "title": "PipelineHealth"
+      },
+      "Trend": {
+        "properties": {
+          "week_start_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Week Start Date"
+          },
+          "total_spend_usd": {
+            "type": "number",
+            "title": "Total Spend Usd"
+          },
+          "advertiser_count": {
+            "type": "integer",
+            "title": "Advertiser Count"
+          },
+          "wow_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wow Change Pct"
+          }
+        },
+        "type": "object",
+        "required": [
+          "week_start_date",
+          "total_spend_usd",
+          "advertiser_count",
+          "wow_change_pct"
+        ],
+        "title": "Trend"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

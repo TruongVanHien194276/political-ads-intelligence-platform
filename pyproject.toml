@@ -23,6 +23,12 @@ dev = [
   "pytest>=9,<10",
   "ruff>=0.14,<1",
 ]
+api = [
+  "fastapi>=0.140,<0.153",
+  "uvicorn>=0.52,<0.54",
+  "httpx>=0.28,<1",
+  "pydantic>=2.12,<3",
+]
 
 [project.scripts]
 political-ads = "political_ads.cli:main"

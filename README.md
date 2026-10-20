@@ -78,3 +78,10 @@
 - [Báo cáo Tuần 13](reports/week13/WEEK13.md) có model card, forecast mart, 3 biểu đồ PNG và [evidence JSON](reports/week13/evidence.json)
 - Live cutoff 2026-10-11 dự đoán tuần 2026-10-18 cho 73 advertiser; 27 advertiser thiếu dữ liệu được abstain, actual live chưa có trong Gold
 - Power BI Cloud Forecast page chưa tạo trên đúng tài khoản; ảnh đã lưu chỉ là biểu đồ local, không phải screenshot Power BI
+
+## Tuần 14 — FastAPI local
+
+- Cài API bằng `.venv/bin/python -m pip install -e '.[dev,api]'`, rồi chạy `make week14`
+- Server: `.venv/bin/python -m uvicorn apps.api.main:app --host 127.0.0.1 --port 8000`; tài liệu tại `http://127.0.0.1:8000/docs`
+- [Báo cáo, sơ đồ luồng và giới hạn nghiệm thu](reports/week14/WEEK14.md); [bằng chứng đối soát API–SQL](reports/week14/evidence.json) và [ví dụ JSON](reports/week14/examples.json)
+- API hiện đọc DuckDB local, không gọi BigQuery; chưa thể xác nhận API khớp Power BI Cloud vì report Power BI chưa được nghiệm thu
