@@ -85,3 +85,11 @@
 - Server: `.venv/bin/python -m uvicorn apps.api.main:app --host 127.0.0.1 --port 8000`; tài liệu tại `http://127.0.0.1:8000/docs`
 - [Báo cáo, sơ đồ luồng và giới hạn nghiệm thu](reports/week14/WEEK14.md); [bằng chứng đối soát API–SQL](reports/week14/evidence.json) và [ví dụ JSON](reports/week14/examples.json)
 - API hiện đọc DuckDB local, không gọi BigQuery; chưa thể xác nhận API khớp Power BI Cloud vì report Power BI chưa được nghiệm thu
+
+## Tuần 15 — React web platform
+
+- Web local ở `apps/web/`, dùng Vite proxy gọi FastAPI, không truy vấn BigQuery từ browser
+- Chạy API như Tuần 14, sau đó `cd apps/web && npm ci && npm run dev` và mở `http://127.0.0.1:5173`
+- `npm run build`, `npm run lint`, `npm run test:e2e` chạy với fixture; `npm run test:live` cần API thật và tạo ảnh + đối soát SQL–API–web
+- [Báo cáo và ảnh chụp 5 màn hình, mobile](reports/week15/WEEK15.md) · [evidence JSON](reports/week15/evidence.json)
+- Power BI Cloud vẫn chưa đối soát được trên đúng tài khoản; không gắn nhãn hoàn thành KPI bốn phía

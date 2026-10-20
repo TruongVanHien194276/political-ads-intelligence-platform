@@ -1,0 +1,34 @@
+{
+  "status": "PASS_LOCAL_WEB_API_SQL",
+  "data_mode": "LOCAL_SNAPSHOT",
+  "power_bi_status": "NOT_VERIFIED",
+  "generated_at_utc": "2026-10-20T17:29:38.016Z",
+  "warehouse_sha256": "c1ef8120b6362897c473f8e2af36b5c8fb0a2f7d90d8420a3479c9b0b39f6d92",
+  "direct_cloud_requests": 0,
+  "week_filter": "2026-10-11",
+  "checks": {
+    "weekly_spend_usd": {
+      "sql": 65042100,
+      "api": 65042100,
+      "web": 65042100
+    },
+    "advertiser_count": {
+      "sql": 2923,
+      "api": 2923,
+      "web": 2923
+    },
+    "loaded_total_spend_usd": {
+      "sql": 609155500,
+      "api": 609155500,
+      "web": 609155500
+    }
+  },
+  "screenshots": [
+    "01_overview_local.png",
+    "02_advertisers_local.png",
+    "03_geography_local.png",
+    "04_forecasts_local.png",
+    "05_pipeline_local.png",
+    "06_overview_mobile_local.png"
+  ]
+}
