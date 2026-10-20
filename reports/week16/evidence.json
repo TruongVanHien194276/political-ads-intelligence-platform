@@ -1,0 +1,36 @@
+{
+  "status": "PASS_LOCAL_ONLY",
+  "gold_sha256": "a70fa257fd8b4c3cf1119ffeec76e52a3aa6a46f105dba22d74392534a8ec7f6",
+  "gold": {
+    "fact_rows": 31453,
+    "weeks": 20,
+    "spend_usd": "609155500.00",
+    "duplicate_keys": 0,
+    "dq_passed": 16,
+    "dq_total": 16
+  },
+  "source_jobs": {
+    "count": 20,
+    "processed_bytes": 1388177868,
+    "billed_bytes": 1405091840,
+    "note": "Historical BigQuery job stats in local manifests"
+  },
+  "parity": {
+    "sql_excel_snapshot": 6,
+    "sql_api": 3,
+    "sql_api_web": 3,
+    "power_bi_cloud": "NOT_VERIFIED"
+  },
+  "api_benchmark": {
+    "endpoint": "/api/v1/overview",
+    "requests": 50,
+    "method": "sequential localhost HTTP, warm cache",
+    "p50_ms": 1.29,
+    "p95_ms": 2.32,
+    "mean_ms": 1.46,
+    "server_rss_mib": 74.4
+  },
+  "cloud_run": "NOT_DEPLOYED_BILLING_OFF",
+  "cloud_logs": "NOT_AVAILABLE",
+  "cloud_cost_usd": null
+}

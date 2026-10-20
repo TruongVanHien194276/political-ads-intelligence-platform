@@ -16,8 +16,29 @@ jobs:
         with:
           python-version: "3.14"
           cache: pip
-      - run: python -m pip install -e ".[dev]"
+      - run: python -m pip install -e ".[dev,api]"
       - run: make check
+      - run: make secrets
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm ci
+        working-directory: apps/web
+      - run: npm run lint
+        working-directory: apps/web
+      - run: npm run build
+        working-directory: apps/web
+      - run: npx playwright install --with-deps chromium
+        working-directory: apps/web
+      - run: npm run test:e2e
+        working-directory: apps/web
 
   terraform:
     runs-on: ubuntu-latest

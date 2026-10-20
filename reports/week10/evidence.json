@@ -3,28 +3,28 @@
   "power_bi_status": "NOT_VERIFIED",
   "refresh_mode": "STATIC_SNAPSHOT",
   "workbook": "political_ads_gold_2026-10-11.xlsx",
-  "workbook_sha256": "2bfdc7ff966423ee20d70a5c6df93b4ae7c254e128bb57e10d44e6b024f644aa",
-  "warehouse_sha256": "c1a73d82801fbf856a58a07e56e0ec6a6856d7d2da002ee33b388984247a06b4",
+  "workbook_sha256": "1ab0e681e3313eff0e85ffbc2f45231c5a60f4fed6e3d71b37c3d83da7357cc0",
+  "warehouse_sha256": "a70fa257fd8b4c3cf1119ffeec76e52a3aa6a46f105dba22d74392534a8ec7f6",
   "period": [
-    "2026-09-20",
+    "2026-05-31",
     "2026-10-11"
   ],
   "dq_passed": 16,
   "dq_total": 16,
   "checks": {
     "fact_rows": {
-      "excel": "9699",
-      "sql": "9699",
+      "excel": "31453",
+      "sql": "31453",
       "match": true
     },
     "total_spend_usd": {
-      "excel": "268708700",
-      "sql": "268708700.00",
+      "excel": "609155500",
+      "sql": "609155500.00",
       "match": true
     },
     "distinct_advertisers": {
-      "excel": "3200",
-      "sql": "3200",
+      "excel": "5060",
+      "sql": "5060",
       "match": true
     },
     "latest_week_spend_usd": {
@@ -44,6 +44,70 @@
     }
   },
   "weekly_spend": [
+    {
+      "week_start": "2026-05-31",
+      "spend_usd": "15319500"
+    },
+    {
+      "week_start": "2026-06-07",
+      "spend_usd": "13304900"
+    },
+    {
+      "week_start": "2026-06-14",
+      "spend_usd": "16248200"
+    },
+    {
+      "week_start": "2026-06-21",
+      "spend_usd": "14441000"
+    },
+    {
+      "week_start": "2026-06-28",
+      "spend_usd": "12806300"
+    },
+    {
+      "week_start": "2026-07-05",
+      "spend_usd": "10438000"
+    },
+    {
+      "week_start": "2026-07-12",
+      "spend_usd": "13865800"
+    },
+    {
+      "week_start": "2026-07-19",
+      "spend_usd": "14430900"
+    },
+    {
+      "week_start": "2026-07-26",
+      "spend_usd": "17868900"
+    },
+    {
+      "week_start": "2026-08-02",
+      "spend_usd": "18605900"
+    },
+    {
+      "week_start": "2026-08-09",
+      "spend_usd": "21157200"
+    },
+    {
+      "week_start": "2026-08-16",
+      "spend_usd": "24060200"
+    },
+    {
+      "week_start": "2026-08-23",
+      "spend_usd": "27541700"
+    },
+    {
+      "week_start": "2026-08-30",
+      "spend_usd": "30519600"
+    },
+    {
+      "week_start": "2026-09-06",
+      "spend_usd": "37339300"
+    },
+    {
+      "week_start": "2026-09-13",
+      "spend_usd": "52499400"
+    },
     {
       "week_start": "2026-09-20",
       "spend_usd": "57031900"

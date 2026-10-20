@@ -1,16 +1,24 @@
-.PHONY: check fmt test week4 week5 week6 week9 week10 week11 week12 week13 week14
+PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python3.14)
+
+.PHONY: check fmt test secrets smoke week4 week5 week6 week9 week10 week11 week12 week13 week14
 
 check:
-	python -m ruff check .
-	python -m ruff format --check .
-	python -m pytest -q
+	$(PYTHON) -m ruff check .
+	$(PYTHON) -m ruff format --check .
+	$(PYTHON) -m pytest -q
 
 fmt:
-	python -m ruff check --fix .
-	python -m ruff format .
+	$(PYTHON) -m ruff check --fix .
+	$(PYTHON) -m ruff format .
 
 test:
-	python -m pytest -q
+	$(PYTHON) -m pytest -q
+
+secrets:
+	$(PYTHON) scripts/check_secrets.py
+
+smoke: check secrets
+	cd apps/web && npm run lint && npm run build && npm run test:e2e
 
 week4:
 	data/tmp/week4/venv/bin/python scripts/week4_load.py

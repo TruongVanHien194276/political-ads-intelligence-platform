@@ -67,8 +67,8 @@
     "has_more": true
   },
   "pipeline_health": {
-    "run_id": "134a195e3edd",
-    "finished_at_utc": "2026-10-20T05:18:48.646557Z",
+    "run_id": "c83cfa7c5a54",
+    "finished_at_utc": "2026-10-20T17:33:33.007114Z",
     "status": "PASS",
     "blocking_failures": 0,
     "gold_latest_week": "2026-10-11"
